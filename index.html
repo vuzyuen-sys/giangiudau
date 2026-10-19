@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f5">
+  <meta name="description" content="Một món quà nhỏ dành riêng cho Giang nhân ngày 20/10.">
+  <title>For Giang ♡ | 20.10</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="petals" class="petal-layer" aria-hidden="true"></div>
+  <div id="particles" class="particle-layer" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" id="homeLink">FOR GIANG <span>♡</span></a>
+    <div class="top-right">
+      <span id="pageCounter">01 / 08</span>
+      <button id="musicToggle" class="music-button" aria-label="Bật nhạc" title="Bật hoặc tắt nhạc">
+        <span id="musicIcon">♫</span>
+        <span id="musicLabel">Bật nhạc</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="experience">
+    <!-- 1. KHU VƯỜN -->
+    <section class="scene scene-garden active" data-scene="0">
+      <div class="corner-flower flower-a">✿</div>
+      <div class="corner-flower flower-b">❀</div>
+      <div class="corner-flower flower-c">✿</div>
+      <div class="corner-flower flower-d">❀</div>
+
+      <div class="scene-content hero-content">
+        <div class="eyebrow">20 THÁNG 10 · A LITTLE GIFT</div>
+        <div class="envelope-wrap" id="envelope" role="button" tabindex="0" aria-label="Mở phong bì">
+          <div class="envelope-shadow"></div>
+          <div class="letter-paper"><span>Gửi Giang ♡</span></div>
+          <div class="envelope-body"></div>
+          <div class="envelope-flap"></div>
+          <div class="envelope-seal">♡</div>
+        </div>
+        <p class="small-label">MỘT BỨC THƯ NHỎ DÀNH RIÊNG CHO CẬU</p>
+        <h1 class="hero-title">Một chút <em>dịu dàng</em></h1>
+        <p class="hero-subtitle">
+          Giang ơi, hôm nay có một điều đặc biệt<br class="desktop-only">
+          mà mình muốn dành tặng cậu...
+        </p>
+        <button class="primary-button" data-next>
+          Mở món quà nhé <span>♡</span>
+        </button>
+        <div class="scroll-hint">MỘT HÀNH TRÌNH NHỎ · 8 ĐIỀU BẤT NGỜ</div>
+      </div>
+    </section>
+
+    <!-- 2. TRÁI TIM -->
+    <section class="scene scene-heart" data-scene="1">
+      <div class="scene-content center-content">
+        <div class="eyebrow">LITTLE THINGS, BIG FEELINGS</div>
+        <h2 class="section-title">Từ những điều <em>nhỏ bé</em></h2>
+        <p class="section-subtitle">
+          Đôi khi, những điều đẹp đẽ nhất được tạo nên từ vô vàn điều bé xíu.
+        </p>
+        <canvas id="heartCanvas" aria-label="Trái tim được tạo từ nhiều trái tim nhỏ"></canvas>
+        <p class="heart-caption" id="heartCaption">
+          Có những điều nhỏ bé, khi ở cạnh nhau, lại trở thành một điều thật đẹp.
+        </p>
+        <button class="outline-button" id="heartSurprise">Chạm vào trái tim ♡</button>
+      </div>
+    </section>
+
+    <!-- 3. LỜI CHÚC VÀ MƯA TIỀN -->
+    <section class="scene scene-wishes" data-scene="2">
+      <div id="moneyRain" class="money-rain" aria-hidden="true"></div>
+      <div class="scene-content center-content wish-card">
+        <div class="golden-orb"></div>
+        <div class="eyebrow">A LITTLE WISH FOR YOU</div>
+        <h2 class="section-title">Gửi cậu <em>ngàn điều may</em></h2>
+        <div class="wish-paper">
+          <div class="paper-flower">✿</div>
+          <p class="wish-text" id="wishText"></p>
+          <span class="wish-signature">Thân thương dành tặng Giang ♡</span>
+        </div>
+        <button class="primary-button gold-button" id="moreLuck">
+          Nhận thêm chút may mắn <span>✦</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 4. VƯỜN HOA -->
+    <section class="scene scene-bloom">
+      <div class="scene-content center-content">
+        <div class="eyebrow">LET YOURSELF BLOOM</div>
+        <h2 class="section-title">Một khu vườn <em>cho riêng cậu</em></h2>
+        <p class="section-subtitle">Chạm vào khu vườn để những bông hoa bắt đầu nở nhé.</p>
+        <div id="garden" class="garden" role="button" tabindex="0" aria-label="Chạm để trồng hoa">
+          <div class="garden-sky">
+            <span class="garden-cloud cloud-one">☁</span>
+            <span class="garden-cloud cloud-two">☁</span>
+            <span class="garden-sun">☼</span>
+          </div>
+          <div class="garden-ground"></div>
+          <div id="grownFlowers" class="grown-flowers"></div>
+          <div class="garden-hint">✿ Chạm để gieo một bông hoa ✿</div>
+        </div>
+        <p id="flowerCount" class="flower-count">0 / 10 bông hoa đã nở</p>
+        <p id="gardenMessage" class="garden-message">Mỗi bông hoa là một lời chúc tốt lành.</p>
+        <button class="outline-button" id="resetGarden">Trồng lại khu vườn ↻</button>
+      </div>
+    </section>
+
+    <!-- 5. BỨC THƯ -->
+    <section class="scene scene-letter">
+      <div class="scene-content center-content">
+        <div class="eyebrow">WORDS FROM THE HEART</div>
+        <h2 class="section-title">Có đôi lời <em>muốn gửi</em></h2>
+        <p class="section-subtitle">Một bức thư nhỏ, mong cậu sẽ đọc bằng một nụ cười.</p>
+        <div class="letter-envelope" id="letterEnvelope" role="button" tabindex="0" aria-label="Mở bức thư">
+          <div class="letter-inside"></div>
+          <div class="letter-front"><span>Gửi Giang</span><b>♡</b></div>
+          <div class="letter-top"></div>
+          <div class="letter-stamp">20·10</div>
+        </div>
+        <p class="letter-hint" id="letterHint">Chạm vào phong thư để mở</p>
+        <article id="personalLetter" class="personal-letter" hidden>
+          <div class="letter-date">NGÀY 20 THÁNG 10</div>
+          <h3>Giang thân mến,</h3>
+          <p>
+            Nhân ngày 20/10, mình mong cậu luôn có đủ dịu dàng để yêu thương bản thân,
+            đủ dũng cảm để theo đuổi những điều mình thích và đủ bình yên để tận hưởng
+            những ngày bình thường nhất.
+          </p>
+          <p>
+            Mong rằng những cố gắng của cậu đều được đền đáp, những nỗi buồn rồi sẽ
+            qua đi, và trên hành trình phía trước, cậu sẽ gặp thật nhiều người tử tế.
+            Đừng quên rằng cậu có giá trị theo cách rất riêng của mình nhé.
+          </p>
+          <p>Chúc cậu luôn được trân trọng, được lắng nghe và được sống những ngày thật đẹp.</p>
+          <div class="letter-end">Một món quà nhỏ dành riêng cho cậu ♡</div>
+        </article>
+        <button class="primary-button" data-next id="letterContinue">
+          Còn một điều nữa... <span>→</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 6. BẦU TRỜI SAO -->
+    <section class="scene scene-stars">
+      <div id="starField" class="star-field" aria-hidden="true"></div>
+      <div class="shooting-star" aria-hidden="true"></div>
+      <div class="scene-content center-content stars-content">
+        <div class="eyebrow">A SKY FULL OF WISHES</div>
+        <h2 class="section-title">Bầu trời mang tên <em>Giang</em></h2>
+        <p class="section-subtitle">Chạm vào những vì sao để khám phá lời chúc nhé.</p>
+        <div class="constellation">
+          <svg viewBox="0 0 320 210" role="img" aria-label="Chòm sao trái tim">
+            <path class="constellation-line" d="M160 165 L70 105 L88 48 L160 78 L232 48 L250 105 Z"/>
+            <path class="constellation-line" d="M70 105 L160 165 L250 105"/>
+            <path class="constellation-line" d="M88 48 L232 48"/>
+          </svg>
+          <button class="star-point star-one" data-wish="Bình an" aria-label="Lời chúc bình an">✦</button>
+          <button class="star-point star-two" data-wish="Tự tin" aria-label="Lời chúc tự tin">✦</button>
+          <button class="star-point star-three" data-wish="May mắn" aria-label="Lời chúc may mắn">✦</button>
+          <button class="star-point star-four" data-wish="Thành công" aria-label="Lời chúc thành công">✦</button>
+          <button class="star-point star-five" data-wish="Hạnh phúc" aria-label="Lời chúc hạnh phúc">✦</button>
+          <button class="star-point star-six" data-wish="Yêu thương" aria-label="Lời chúc yêu thương">✦</button>
+        </div>
+        <div id="starMessage" class="star-message">Một vì sao nhỏ, một điều tốt lành.</div>
+        <button class="outline-button" data-next>Đi đến điều cuối cùng ♡</button>
+      </div>
+    </section>
+
+    <!-- 7. HỘP QUÀ -->
+    <section class="scene scene-gift">
+      <div class="scene-content center-content">
+        <div class="eyebrow">ONE LAST LITTLE SURPRISE</div>
+        <h2 class="section-title">Một món quà <em>bí mật</em></h2>
+        <p class="section-subtitle">Có những niềm vui chỉ xuất hiện khi ta chịu mở lòng khám phá.</p>
+        <button id="giftBox" class="gift-box" aria-label="Mở hộp quà">
+          <span class="gift-lid"></span>
+          <span class="gift-bow">♡</span>
+          <span class="gift-body"></span>
+          <span class="gift-ribbon"></span>
+          <span class="gift-sparkle">✦</span>
+        </button>
+        <p id="giftHint" class="gift-hint">Chạm để mở món quà nhé!</p>
+        <div id="giftReveal" class="gift-reveal" hidden>
+          <div class="gift-icon">🌷</div>
+          <h3>Một chiếc phiếu hạnh phúc</h3>
+          <p>Đổi lấy một ngày thật vui, một món cậu thích hoặc một kỷ niệm đáng nhớ.</p>
+          <p class="gift-small">Giá trị: một nụ cười của Giang ♡</p>
+        </div>
+        <button class="primary-button" data-next id="giftContinue">
+          Đến lời chúc cuối cùng <span>→</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 8. KẾT THÚC -->
+    <section class="scene scene-finale">
+      <div id="finalPetals" class="final-petals" aria-hidden="true"></div>
+      <div class="sunset-sun"></div>
+      <div class="sunset-hills hill-back"></div>
+      <div class="sunset-hills hill-front"></div>
+      <div class="sunset-grass"></div>
+      <div class="scene-content center-content finale-content">
+        <div class="eyebrow">A BEAUTIFUL DAY FOR YOU</div>
+        <div class="final-flower">✿</div>
+        <h2 class="final-title">Giang à,<br><em>hãy luôn rực rỡ nhé.</em></h2>
+        <p class="final-message">
+          Mong cậu luôn tìm thấy ánh sáng trong những ngày nhiều mây,
+          tìm thấy niềm vui trong những điều bình thường và luôn tự hào
+          về chính mình. Chúc cậu một ngày 20/10 thật ấm áp và thật nhiều yêu thương.
+        </p>
+        <div class="final-signature">Một món quà nhỏ, với thật nhiều điều tốt đẹp ♡</div>
+        <button id="restartButton" class="primary-button">
+          Xem lại món quà từ đầu <span>↻</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <nav class="navigation" aria-label="Điều hướng các trang">
+    <button id="prevButton" class="nav-arrow" aria-label="Trang trước">←</button>
+    <div id="navDots" class="nav-dots">
+      <button class="nav-dot current" data-go="0" aria-label="Trang 1"></button>
+      <button class="nav-dot" data-go="1" aria-label="Trang 2"></button>
+      <button class="nav-dot" data-go="2" aria-label="Trang 3"></button>
+      <button class="nav-dot" data-go="3" aria-label="Trang 4"></button>
+      <button class="nav-dot" data-go="4" aria-label="Trang 5"></button>
+      <button class="nav-dot" data-go="5" aria-label="Trang 6"></button>
+      <button class="nav-dot" data-go="6" aria-label="Trang 7"></button>
+      <button class="nav-dot" data-go="7" aria-label="Trang 8"></button>
+    </div>
+    <button id="nextButton" class="nav-arrow" aria-label="Trang tiếp theo">→</button>
+  </nav>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="musicStatus" class="sr-only" aria-live="polite"></div>
+</body>
+</html>
